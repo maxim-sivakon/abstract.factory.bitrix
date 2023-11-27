@@ -23,20 +23,20 @@ $updateStage = $crossUpdatesFactory->updateStage();
 
 function copyFieldToField(&$arFields)
 {
-    global $crossUpdatesFactory;
-    return $crossUpdatesFactory->builder($arFields);
+    global $copyFieldToField;
+    return $copyFieldToField->builder($arFields);
 }
 
 function updateFields(&$arFields)
 {
-    global $crossUpdatesFactory;
-    return $crossUpdatesFactory->builder($arFields);
+    global $updateFields;
+    return $updateFields->builder($arFields);
 }
 
 function updateStage(&$arFields)
 {
-    global $crossUpdatesFactory;
-    return $crossUpdatesFactory->builder($arFields);
+    global $updateStage;
+    return $updateStage->builder($arFields);
 }
 
 addEventHandler('crm', 'OnBeforeCrmDealUpdate', 'copyFieldToField');
